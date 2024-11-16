@@ -11,7 +11,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Write tests for components*
 
 # Project Structure
-```html
+<div>
+  <pre>
+    <code>
 src/
 ├── app-routing.module.ts
 ├── app.component.css
@@ -65,6 +67,10 @@ src/
 └── services/
     ├── employee.service.spec.ts
     ├── employee.service.ts
+    </code>
+  </pre>
+</div>
+
 
 # Screenshots
 ![image](https://github.com/user-attachments/assets/12170740-d675-4742-9126-1f6e471125e4)
