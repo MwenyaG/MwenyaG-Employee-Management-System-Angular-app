@@ -10,7 +10,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Extract reusable components for code reusability.
 - Write tests for components*
 
-![image](https://github.com/user-attachments/assets/12170740-d675-4742-9126-1f6e471125e4)
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+  <img src="https://github.com/user-attachments/assets/12170740-d675-4742-9126-1f6e471125e4" alt="Image 1" style="width: 30%; margin: 10px;">
+  <img src="https://github.com/user-attachments/assets/451dcb3a-ee2f-40b6-a2bb-b12d03e68936" alt="Image 2" style="width: 30%; margin: 10px;">
+  <img src="https://github.com/user-attachments/assets/62a4f016-70d1-4774-804e-c29312450794" alt="Image 3" style="width: 30%; margin: 10px;">
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+  <img src="https://github.com/user-attachments/assets/25e96070-95e8-44d9-b4ea-392d13d1feed" alt="Image 4" style="width: 30%; margin: 10px;">
+  <img src="https://github.com/user-attachments/assets/1f924f34-668d-4422-a78c-137094e66ab9" alt="Image 5" style="width: 30%; margin: 10px;">
+  <img src="https://github.com/user-attachments/assets/09e9f51c-cbe6-48e8-b514-e69981073b77" alt="Image 6" style="width: 30%; margin: 10px;">
+</div>
+
 
 
 # Project Structure
