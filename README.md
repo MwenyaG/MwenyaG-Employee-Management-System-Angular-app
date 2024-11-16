@@ -93,3 +93,10 @@ src/
 
 ## Employee deleted snackbar
 ![image](https://github.com/user-attachments/assets/09e9f51c-cbe6-48e8-b514-e69981073b77)
+
+## Lazy Loaded modules
+![image](https://github.com/user-attachments/assets/a71319d2-e8b4-468a-b1fd-8055387615fd)
+
+## db.json
+![image](https://github.com/user-attachments/assets/0dd85649-8cd9-4ad8-b170-5f890ce0f814)
+
