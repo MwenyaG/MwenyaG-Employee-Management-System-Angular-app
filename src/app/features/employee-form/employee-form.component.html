@@ -1,0 +1,132 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ isEditMode ? 'Edit Employee' : 'Add Employee' }} Form</mat-card-title>
+    </mat-card-header>
+  
+    <form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <!-- Name Field -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              type="text"
+              formControlName="name"
+              placeholder="Enter name"
+              required
+            />
+            <mat-error *ngIf="empForm.get('name')?.hasError('required')">
+              Name is required.
+            </mat-error>
+            <mat-error *ngIf="empForm.get('name')?.hasError('minlength')">
+              Name must be at least 3 characters long.
+            </mat-error>
+            <mat-error *ngIf="empForm.get('name')?.hasError('onlyLetters')">
+              Name must contain only letters.
+            </mat-error>
+          </mat-form-field>
+          
+        </div>
+  
+        <!-- Email Field -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="e.g Preeti@gmail.com" formControlName="email" required />
+            <mat-error *ngIf="empForm.get('email')?.hasError('required')">
+              Email is required
+            </mat-error>
+            <mat-error *ngIf="empForm.get('email')?.hasError('email')">
+              Enter a valid email
+            </mat-error>
+          </mat-form-field>
+        </div>
+  
+        <!-- Position and Salary Fields -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Position</mat-label>
+            <mat-select formControlName="position" required>
+              <mat-option *ngFor="let val of position" [value]="val">{{ val }}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="empForm.get('position')?.hasError('required')">
+              Position is required
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- format for salary -->
+          <mat-form-field appearance="outline" class="half-width">
+            <mat-label>Salary</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="1500.00"
+              formControlName="salary"
+              required
+              (blur)="formatSalary()"
+              (keypress)="validateNumberInput($event)" 
+            />
+            <mat-hint>In MYR</mat-hint>
+            <mat-error *ngIf="empForm.get('salary')?.hasError('required')">
+              Salary is required
+            </mat-error>
+            <mat-error *ngIf="empForm.get('salary')?.hasError('notANumber')">
+              Salary must be a valid number
+            </mat-error>
+            <mat-error *ngIf="empForm.get('salary')?.hasError('notPositive')">
+              Salary must be a positive number
+            </mat-error>
+          </mat-form-field>
+          
+        </div>
+  
+        <!-- Date of Joining Field -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Date of Joining</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="doj" required />
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="empForm.get('doj')?.hasError('required')">
+              Date of Joining is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        
+  
+        <!-- Phone Number Field -->
+        <div class="row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Phone Number</mat-label>
+            <input
+              matInput
+              type="tel"
+              placeholder="0123456789"
+              formControlName="phone"
+              required
+            />
+            <mat-hint>Enter a valid phone number</mat-hint>
+            <mat-error *ngIf="empForm.get('phone')?.hasError('required')">
+              Phone number is required
+            </mat-error>
+            <mat-error *ngIf="empForm.get('phone')?.hasError('pattern')">
+              Please enter a valid phone number (e.g 0123456789)
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+  
+      <!-- Dynamically change between update or save -->
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="empForm.invalid">
+          {{ employeeData ? 'Update' : 'Save' }}
+        </button>
+        <button mat-raised-button color="warn" type="button" (click)="cancel()">
+          Cancel
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+  

@@ -1,0 +1,65 @@
+.main-body {
+  padding: 20px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-field {
+  flex: 1;
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: bold;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+mat-header-row {
+  background-color: #f1f1f1;
+}
+
+mat-cell, mat-header-cell {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+mat-row:hover {
+  background-color: #fafafa;
+}
+
+/* Action buttons container */
+.action-buttons {
+  display: flex;
+  gap: 10px; /* Space between the Edit and Delete buttons */
+  justify-content: center;
+  align-items: center;
+}
+
+.no-data-row {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #757575;
+}
+
+mat-paginator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}

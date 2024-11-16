@@ -1,0 +1,76 @@
+{
+  "employees": [
+    {
+      "name": "Preeti",
+      "email": "Preeti@gmail.com",
+      "position": "Project Coordinator",
+      "doj": "2024-11-22T16:00:00.000Z",
+      "salary": "1500.00",
+      "phone": "0142349838",
+      "id": "13de"
+    },
+    {
+      "name": "Hari",
+      "email": "hari@gmail.com",
+      "position": "Software Developer",
+      "doj": "2024-10-15T16:00:00.000Z",
+      "salary": "3500.00",
+      "phone": "01234567892",
+      "id": "14fg"
+    },
+    {
+      "name": "Danura",
+      "email": "Danura@gmail.com",
+      "position": "Marketing Specialist",
+      "doj": "2024-09-10T16:00:00.000Z",
+      "salary": "2800.00",
+      "phone": "01123456782",
+      "id": "15gh"
+    },
+    {
+      "name": "Inah",
+      "email": "inah@fieldex.com",
+      "position": "HR Assistant",
+      "doj": "2023-08-01T16:00:00.000Z",
+      "salary": "2200.00",
+      "phone": "01345678903",
+      "id": "16hi"
+    },
+    {
+      "name": "Pat",
+      "email": "Pat@gmail.com",
+      "position": "Accountant",
+      "doj": "2022-07-20T16:00:00.000Z",
+      "salary": "3200.00",
+      "phone": "01456789011",
+      "id": "17ij"
+    },
+    {
+      "name": "Vinesh",
+      "email": "Vinesh@gmail.com",
+      "position": "Customer Support",
+      "doj": "2021-06-15T16:00:00.000Z",
+      "salary": "1800.00",
+      "phone": "01567890121",
+      "id": "18jk"
+    },
+    {
+      "name": "Nathan",
+      "email": "nathan@gmail.com",
+      "position": "Finance Manager",
+      "doj": "2020-05-05T16:00:00.000Z",
+      "salary": "4500.00",
+      "phone": "01678901236",
+      "id": "19kl"
+    },
+    {
+      "id": "f7d7",
+      "name": "Mia",
+      "email": "mia@gmail.com",
+      "position": "Customer Support",
+      "doj": "2024-11-22T16:00:00.000Z",
+      "salary": "10000000.00",
+      "phone": "10102992011"
+    }
+  ]
+}
