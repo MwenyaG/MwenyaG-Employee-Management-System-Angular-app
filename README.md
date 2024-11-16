@@ -1,9 +1,16 @@
-# EmployeeManagementApp
+# Employee Management App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
+# Lessons learnt 
+- Organize app into feature modules (e.g., employee-form, employee-list).
+- Use routing and lazy loading for better performance.
+- Use services for crud functionality
+- Use services for communication between components.
+- Extract reusable components for code reusability.
+- Write tests for components*
+  
 # Project Structure
-
 ```html
 src/
 ├── app-routing.module.ts
