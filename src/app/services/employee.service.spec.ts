@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { EmployeeService } from './employee.service';
-import { environment } from '../../environments/environment'; // Ensure this is imported correctly
+import { environment } from '../../environments/environment';
 
 describe('EmployeeService', () => {
   let service: EmployeeService;
@@ -17,7 +17,6 @@ describe('EmployeeService', () => {
     httpMock = TestBed.inject(HttpTestingController);  // Get the HTTP testing controller
   });
 
-  // After each test, verify that no outstanding HTTP requests are left unhandled
   afterEach(() => {
     httpMock.verify();
   });
@@ -28,7 +27,7 @@ describe('EmployeeService', () => {
 
     // Call the deleteEmployee function from the service
     service.deleteEmployee(employeeId).subscribe((response) => {
-      expect(response).toBeNull();  // Since DELETE usually doesn't return data, expect a null response
+      expect(response).toBeNull();  
     });
 
     // Expect a DELETE request to be made to the correct endpoint
@@ -37,11 +36,9 @@ describe('EmployeeService', () => {
     // Ensure the HTTP method is DELETE
     expect(req.request.method).toBe('DELETE');
     
-    // Mock the response for a successful deletion (no data returned)
     req.flush(null);  // Respond with null as expected for a successful DELETE request
   });
 
-  // Optionally, you can add other tests, for example:
   it('should handle error when deleting an employee', () => {
     const employeeId = '14fg';  // The employee ID to delete
 
