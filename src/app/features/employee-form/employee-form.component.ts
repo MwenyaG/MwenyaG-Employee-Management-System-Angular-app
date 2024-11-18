@@ -41,7 +41,7 @@ export class EmployeeFormComponent implements OnInit {
         [
           Validators.required,
           Validators.minLength(3),
-          this.onlyLettersValidator, // Add the custom validator
+          this.onlyLettersValidator, //custom validator
         ],
       ],      email: ['', [Validators.required, Validators.email]],
       position: ['', Validators.required],
