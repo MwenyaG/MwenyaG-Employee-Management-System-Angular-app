@@ -7,7 +7,6 @@ describe('EmployeeService', () => {
   let service: EmployeeService;
   let httpMock: HttpTestingController;
 
-  // Set up the testing environment before each test
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],  // Import HttpClientTestingModule to mock HTTP requests
