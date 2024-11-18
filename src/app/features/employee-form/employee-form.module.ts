@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { EmployeeFormRoutingModule } from './employee-form-routing.module';
 import { EmployeeFormComponent } from './employee-form.component';
 
-// Import Angular Material Modules
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -14,7 +13,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatLineModule } from '@angular/material/core';
 
-// Import ReactiveFormsModule for form handling
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -22,7 +20,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     EmployeeFormRoutingModule,
-    // Add Angular Material modules here
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -32,7 +29,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     MatInputModule,
-    // Add ReactiveFormsModule here
     ReactiveFormsModule
   ]
 })

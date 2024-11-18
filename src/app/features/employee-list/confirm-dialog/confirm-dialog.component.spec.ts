@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { ConfirmDialogComponent } from './confirm-dialog.component';
 
@@ -8,9 +9,23 @@ describe('ConfirmDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConfirmDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [ConfirmDialogComponent],
+      providers: [
+        {
+          provide: MatDialogRef,
+          useValue: {
+            close: jasmine.createSpy('close') // Mock MatDialogRef with a spy
+          }
+        },
+        {
+          provide: MAT_DIALOG_DATA,
+          useValue: {
+            title: 'Confirmation',
+            message: 'Are you sure you want to delete this employee?'
+          } // Mock MAT_DIALOG_DATA with your data
+        }
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ConfirmDialogComponent);
     component = fixture.componentInstance;
@@ -19,5 +34,22 @@ describe('ConfirmDialogComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display the correct title and message', () => {
+    expect(component.data.title).toBe('Confirmation');
+    expect(component.data.message).toBe('Are you sure you want to delete this employee?');
+  });
+
+  it('should close the dialog with false on cancel', () => {
+    const dialogRefSpy = TestBed.inject(MatDialogRef);
+    component.onCancel();
+    expect(dialogRefSpy.close).toHaveBeenCalledWith(false);
+  });
+
+  it('should close the dialog with true on confirm', () => {
+    const dialogRefSpy = TestBed.inject(MatDialogRef);
+    component.onConfirm();
+    expect(dialogRefSpy.close).toHaveBeenCalledWith(true);
   });
 });
