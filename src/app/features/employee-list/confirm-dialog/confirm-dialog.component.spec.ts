@@ -22,7 +22,7 @@ describe('ConfirmDialogComponent', () => {
           useValue: {
             title: 'Confirmation',
             message: 'Are you sure you want to delete this employee?'
-          } // Mock MAT_DIALOG_DATA with your data
+          } 
         }
       ]
     }).compileComponents();
