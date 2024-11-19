@@ -10,8 +10,6 @@ run: 'npm install' to get started
 - Use services for crud functionality
 - Use services for communication between components.
 - Extract reusable components for code reusability.
-- Write tests for components*
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 # Project Structure
 <div>
@@ -82,14 +80,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 # Screenshots
 ## Introduction page
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
 ![image](https://github.com/user-attachments/assets/12170740-d675-4742-9126-1f6e471125e4)
 ## Running end-to-end tests
 
 ## Employee list page
 ![image](https://github.com/user-attachments/assets/451dcb3a-ee2f-40b6-a2bb-b12d03e68936)
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
 
 ## Add employee page
 ![image](https://github.com/user-attachments/assets/62a4f016-70d1-4774-804e-c29312450794)
